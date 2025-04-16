@@ -74,11 +74,6 @@
     <Content Include="image\拿捏.jpg" />
     <Content Include="image\睡觉.jpg" />
     <Content Include="image\花蛋.png" />
-    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.7.1.js" />
-    <Content Include="Scripts\jquery-3.7.1.min.js" />
-    <Content Include="Scripts\jquery-3.7.1.slim.js" />
-    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
     <Content Include="test1_1.2.3.4.5.aspx" />
     <Content Include="test1_13.aspx" />
     <Content Include="test1_13_2.aspx" />
@@ -138,8 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.7.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
