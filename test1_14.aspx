@@ -38,7 +38,7 @@
             <br />
             <asp:Label ID="Label6" runat="server" Text="年龄："></asp:Label>
             <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox5" ErrorMessage="年龄必须在18-60之间" MaximumValue="60" MinimumValue="18"></asp:RangeValidator>
+            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox5" MaximumValue="60" MinimumValue="18" Type="Integer">年龄必须在18-60之间</asp:RangeValidator>
             <br />
             <asp:Label ID="Label7" runat="server" Text="出生日期："></asp:Label>
             <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
