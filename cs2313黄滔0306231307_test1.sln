@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs2313huangtao_test1", "cs2313huangtao_test1.csproj", "{C6D402FE-8046-43DE-947C-E9DCE5B13B78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs2313黄滔0306231307_test2", "..\cs2313黄滔0306231307_test2\cs2313黄滔0306231307_test2.csproj", "{EA8D8423-38C2-443A-90B7-E64FDF0339FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C6D402FE-8046-43DE-947C-E9DCE5B13B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6D402FE-8046-43DE-947C-E9DCE5B13B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6D402FE-8046-43DE-947C-E9DCE5B13B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8D8423-38C2-443A-90B7-E64FDF0339FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8D8423-38C2-443A-90B7-E64FDF0339FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8D8423-38C2-443A-90B7-E64FDF0339FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8D8423-38C2-443A-90B7-E64FDF0339FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
