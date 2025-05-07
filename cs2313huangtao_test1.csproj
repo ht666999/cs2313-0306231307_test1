@@ -104,9 +104,18 @@
     <Content Include="test2\test2_9_chat.aspx" />
     <Content Include="test2\test2_9_login.aspx" />
     <Content Include="test2\test2__8.aspx" />
+    <Content Include="test3\test3_2.aspx" />
+    <Content Include="test3\test3_1.aspx" />
+    <Content Include="test3\test3_3.aspx" />
+    <Content Include="test3\test3_4.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStudent.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataStudent.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -278,8 +287,44 @@
     <Compile Include="test2\test2__8.aspx.designer.cs">
       <DependentUpon>test2__8.aspx</DependentUpon>
     </Compile>
+    <Compile Include="test3\test3_2.aspx.cs">
+      <DependentUpon>test3_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_2.aspx.designer.cs">
+      <DependentUpon>test3_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_1.aspx.cs">
+      <DependentUpon>test3_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_1.aspx.designer.cs">
+      <DependentUpon>test3_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_3.aspx.cs">
+      <DependentUpon>test3_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_3.aspx.designer.cs">
+      <DependentUpon>test3_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_4.aspx.cs">
+      <DependentUpon>test3_4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_4.aspx.designer.cs">
+      <DependentUpon>test3_4.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataStudent.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataStudent.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DataStudent.dbml.layout">
+      <DependentUpon>DataStudent.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <Content Include="test2\DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

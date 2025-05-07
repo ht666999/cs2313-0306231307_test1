@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="student1_data" Class="DataStudentDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Course" Member="Course">
+    <Type Name="Course">
+      <Column Name="Cno" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cname" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Ccredit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cpno" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Course_Course" Member="Course2" ThisKey="Cno" OtherKey="Cpno" Type="Course" />
+      <Association Name="Course_SC" Member="SC" ThisKey="Cno" OtherKey="Cno" Type="SC" />
+      <Association Name="Course_Course" Member="Course1" ThisKey="Cpno" OtherKey="Cno" Type="Course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Student">
+    <Type Name="Student">
+      <Column Name="Sno" Type="System.String" DbType="Char(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sname" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Sage" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Sgender" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="College" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Student_SC" Member="SC" ThisKey="Sno" OtherKey="Sno" Type="SC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SC" Member="SC">
+    <Type Name="SC">
+      <Column Name="Sno" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Cno" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Grade" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SCID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Course_SC" Member="Course" ThisKey="Cno" OtherKey="Cno" Type="Course" IsForeignKey="true" />
+      <Association Name="Student_SC" Member="Student" ThisKey="Sno" OtherKey="Sno" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
