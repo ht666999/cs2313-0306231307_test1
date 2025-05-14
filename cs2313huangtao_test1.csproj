@@ -108,9 +108,15 @@
     <Content Include="test3\test3_1.aspx" />
     <Content Include="test3\test3_3.aspx" />
     <Content Include="test3\test3_4.aspx" />
+    <Content Include="test3\test3_5.6.aspx" />
+    <Content Include="test3\test3_7.aspx" />
+    <Content Include="test3\test3_8.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStudent.cs">
+      <DependentUpon>DataStudent.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DataStudent.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -314,6 +320,27 @@
     </Compile>
     <Compile Include="test3\test3_4.aspx.designer.cs">
       <DependentUpon>test3_4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_5.6.aspx.cs">
+      <DependentUpon>test3_5.6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_5.6.aspx.designer.cs">
+      <DependentUpon>test3_5.6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_7.aspx.cs">
+      <DependentUpon>test3_7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_7.aspx.designer.cs">
+      <DependentUpon>test3_7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_8.aspx.cs">
+      <DependentUpon>test3_8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_8.aspx.designer.cs">
+      <DependentUpon>test3_8.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

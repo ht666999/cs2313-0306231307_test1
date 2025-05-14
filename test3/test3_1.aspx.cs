@@ -1,6 +1,7 @@
 ﻿using cs2313huangtao_test1.test2;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;

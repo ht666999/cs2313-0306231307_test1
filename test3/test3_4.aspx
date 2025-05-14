@@ -13,6 +13,8 @@
             <asp:GridView ID="GridView1" runat="server">
             </asp:GridView>
         </div>
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="cs2313huangtao_test1.DataStudentDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Student">
+        </asp:LinqDataSource>
     </form>
 </body>
 </html>

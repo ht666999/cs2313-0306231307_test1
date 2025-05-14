@@ -9,6 +9,7 @@ namespace cs2313huangtao_test1.test3
 {
     public partial class test3_4 : System.Web.UI.Page
     {
+
         DataStudentDataContext db = new DataStudentDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
