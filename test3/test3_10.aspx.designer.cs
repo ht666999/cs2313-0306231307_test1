@@ -11,7 +11,7 @@ namespace cs2313huangtao_test1.test3
 {
 
 
-    public partial class test3_3
+    public partial class test3_10
     {
 
         /// <summary>
@@ -33,6 +33,15 @@ namespace cs2313huangtao_test1.test3
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
+        /// ListBox1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox ListBox1;
+
+        /// <summary>
         /// LinqDataSource1 控件。
         /// </summary>
         /// <remarks>
@@ -42,12 +51,12 @@ namespace cs2313huangtao_test1.test3
         protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1;
 
         /// <summary>
-        /// Label1 控件。
+        /// LinqDataSource2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource2;
     }
 }

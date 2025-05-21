@@ -76,11 +76,14 @@
     <Content Include="image\睡觉.jpg" />
     <Content Include="image\花蛋.png" />
     <Content Include="test1\image\东西.jpg" />
+    <Content Include="test1\image\信息管理系.jpg" />
     <Content Include="test1\image\听听.jpg" />
     <Content Include="test1\image\干大事.jpg" />
     <Content Include="test1\image\拿捏.jpg" />
     <Content Include="test1\image\睡觉.jpg" />
     <Content Include="test1\image\花蛋.png" />
+    <Content Include="test1\image\计算机系.jpg" />
+    <Content Include="test1\image\通信工程系.jpg" />
     <Content Include="test1\test1_1.2.3.4.5.aspx" />
     <Content Include="test1\test1_13.aspx" />
     <Content Include="test1\test1_13_2.aspx" />
@@ -104,6 +107,8 @@
     <Content Include="test2\test2_9_chat.aspx" />
     <Content Include="test2\test2_9_login.aspx" />
     <Content Include="test2\test2__8.aspx" />
+    <Content Include="test3\test3_10.aspx" />
+    <Content Include="test3\test3_11.aspx" />
     <Content Include="test3\test3_2.aspx" />
     <Content Include="test3\test3_1.aspx" />
     <Content Include="test3\test3_3.aspx" />
@@ -111,6 +116,7 @@
     <Content Include="test3\test3_5.6.aspx" />
     <Content Include="test3\test3_7.aspx" />
     <Content Include="test3\test3_8.aspx" />
+    <Content Include="test3\test3_9.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +299,20 @@
     <Compile Include="test2\test2__8.aspx.designer.cs">
       <DependentUpon>test2__8.aspx</DependentUpon>
     </Compile>
+    <Compile Include="test3\test3_10.aspx.cs">
+      <DependentUpon>test3_10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_10.aspx.designer.cs">
+      <DependentUpon>test3_10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_11.aspx.cs">
+      <DependentUpon>test3_11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_11.aspx.designer.cs">
+      <DependentUpon>test3_11.aspx</DependentUpon>
+    </Compile>
     <Compile Include="test3\test3_2.aspx.cs">
       <DependentUpon>test3_2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -341,6 +361,13 @@
     </Compile>
     <Compile Include="test3\test3_8.aspx.designer.cs">
       <DependentUpon>test3_8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_9.aspx.cs">
+      <DependentUpon>test3_9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_9.aspx.designer.cs">
+      <DependentUpon>test3_9.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

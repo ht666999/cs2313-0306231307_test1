@@ -10,9 +10,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sname" DataValueField="Sno" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" style="height: 23px" AutoPostBack="true">
+            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="LinqDataSource1" DataTextField="Sname" DataValueField="Sno" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" style="height: 23px" AutoPostBack="True">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:student1_dataConnectionString %>" SelectCommand="SELECT * FROM [Student]"></asp:SqlDataSource>
+            <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="cs2313huangtao_test1.DataStudentDataContext" EntityTypeName="" TableName="Student">
+            </asp:LinqDataSource>
         </div>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </form>

@@ -10,10 +10,17 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="GridView1" runat="server">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Cno" DataSourceID="LinqDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="Cno" HeaderText="Cno" ReadOnly="True" SortExpression="Cno" />
+                    <asp:BoundField DataField="Cname" HeaderText="Cname" SortExpression="Cname" />
+                    <asp:BoundField DataField="Ccredit" HeaderText="Ccredit" SortExpression="Ccredit" />
+                    <asp:BoundField DataField="Cpno" HeaderText="Cpno" SortExpression="Cpno" />
+                    <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                </Columns>
             </asp:GridView>
         </div>
-        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="cs2313huangtao_test1.DataStudentDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Student">
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="cs2313huangtao_test1.DataStudentDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Course">
         </asp:LinqDataSource>
     </form>
 </body>

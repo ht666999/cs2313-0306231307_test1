@@ -13,16 +13,14 @@ namespace cs2313huangtao_test1.test3
         DataStudentDataContext db = new DataStudentDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             DropDownList1_SelectedIndexChanged(sender, e);
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Label1.Text = "";
-            var result= (from r in db.Student
-                        where r.Sname==DropDownList1.SelectedItem.Text
-                        select r).First();
-            Label1.Text = "你选择的学生姓名是： " + result.Sname + "学号是：" + result.Sno;
+            if(DropDownList1.SelectedItem!=null)
+            Label1.Text = "你选择的学生姓名是： " + DropDownList1.SelectedItem.Text + "学号是：" + DropDownList1.SelectedValue;
         }
     }
 }
