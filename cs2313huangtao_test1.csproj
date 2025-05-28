@@ -109,6 +109,11 @@
     <Content Include="test2\test2__8.aspx" />
     <Content Include="test3\test3_10.aspx" />
     <Content Include="test3\test3_11.aspx" />
+    <Content Include="test3\test3_12.aspx" />
+    <Content Include="test3\test3_13.aspx" />
+    <Content Include="test3\test3_13xiugai.aspx" />
+    <Content Include="test3\test3_14.aspx" />
+    <Content Include="test3\test3_15.aspx" />
     <Content Include="test3\test3_2.aspx" />
     <Content Include="test3\test3_1.aspx" />
     <Content Include="test3\test3_3.aspx" />
@@ -312,6 +317,41 @@
     </Compile>
     <Compile Include="test3\test3_11.aspx.designer.cs">
       <DependentUpon>test3_11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_12.aspx.cs">
+      <DependentUpon>test3_12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_12.aspx.designer.cs">
+      <DependentUpon>test3_12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_13.aspx.cs">
+      <DependentUpon>test3_13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_13.aspx.designer.cs">
+      <DependentUpon>test3_13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_13xiugai.aspx.cs">
+      <DependentUpon>test3_13xiugai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_13xiugai.aspx.designer.cs">
+      <DependentUpon>test3_13xiugai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_14.aspx.cs">
+      <DependentUpon>test3_14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_14.aspx.designer.cs">
+      <DependentUpon>test3_14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3\test3_15.aspx.cs">
+      <DependentUpon>test3_15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3\test3_15.aspx.designer.cs">
+      <DependentUpon>test3_15.aspx</DependentUpon>
     </Compile>
     <Compile Include="test3\test3_2.aspx.cs">
       <DependentUpon>test3_2.aspx</DependentUpon>
