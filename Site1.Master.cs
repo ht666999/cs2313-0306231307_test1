@@ -5,23 +5,23 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace cs2313huangtao_test1.test3
+namespace cs2313huangtao_test1
 {
-    public partial class test3_15 : System.Web.UI.Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void GridView1_SelectedIndexChanged()
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ImgBtn2_Click(object sender, ImageClickEventArgs e)
         {
-
+            Response.Redirect("user.aspx");
         }
     }
 }

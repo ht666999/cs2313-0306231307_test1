@@ -18,7 +18,7 @@ namespace cs2313huangtao_test1.test3
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var result = (from i in db.Student
-                          where GridView1.SelectedValue == i.Sno
+                          where GridView1.SelectedValue.ToString() == i.Sno
                           select i).First();
             Label1.Text=result.Sno+result.Sname+result.Sgender+result.College;
         }

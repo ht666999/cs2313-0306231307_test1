@@ -11,7 +11,7 @@ namespace cs2313huangtao_test1
     {
         protected void Application_Start(object sender, EventArgs e)
         {
-            string str= "Data Source=T;Initial Catalog = student1_data; Integrated Security = True";
+            //string str= "Data Source=T;Initial Catalog = student1_data; Integrated Security = True";
         }
     }
 }

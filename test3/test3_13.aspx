@@ -18,6 +18,7 @@
                     <asp:BoundField DataField="Sgender" HeaderText="Sgender" SortExpression="Sgender" />
                     <asp:BoundField DataField="College" HeaderText="College" SortExpression="College" />
                     <asp:HyperLinkField DataNavigateUrlFields="Sno" DataNavigateUrlFormatString="test3_13xiugai.aspx?id={0}" Target="_blank" Text="修改" />
+                    <asp:HyperLinkField DataNavigateUrlFields="Sno" DataNavigateUrlFormatString="test3_13xiugai.aspx?id={0}" Text="该" />
                 </Columns>
             </asp:GridView>
         </div>

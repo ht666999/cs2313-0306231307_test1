@@ -75,6 +75,19 @@
     <Content Include="image\拿捏.jpg" />
     <Content Include="image\睡觉.jpg" />
     <Content Include="image\花蛋.png" />
+    <Content Include="KSimage\buycar.jpg" />
+    <Content Include="KSimage\hmac-studio.jpg" />
+    <Content Include="KSimage\homehpadair.jpg" />
+    <Content Include="KSimage\homehphone.jpg" />
+    <Content Include="KSimage\homemac.jpg" />
+    <Content Include="KSimage\hpad.jpg" />
+    <Content Include="KSimage\hphone-16e.jpg" />
+    <Content Include="KSimage\hwatch-ultra.jpg" />
+    <Content Include="KSimage\imformation.jpg" />
+    <Content Include="KSimage\logo.png" />
+    <Content Include="KSimage\research.png" />
+    <Content Include="KSimage\watch-pride.png" />
+    <Content Include="KSimage\watch-s10.jpg" />
     <Content Include="test1\image\东西.jpg" />
     <Content Include="test1\image\信息管理系.jpg" />
     <Content Include="test1\image\听听.jpg" />
@@ -122,6 +135,13 @@
     <Content Include="test3\test3_7.aspx" />
     <Content Include="test3\test3_8.aspx" />
     <Content Include="test3\test3_9.aspx" />
+    <Content Include="test4\admin.aspx" />
+    <Content Include="test4\home.aspx" />
+    <Content Include="test4\login.aspx" />
+    <Content Include="test4\productadd.aspx" />
+    <Content Include="test4\register.aspx" />
+    <Content Include="test4\user.aspx" />
+    <Content Include="test4\useradd.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +157,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="images.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
     <Compile Include="test1\test1_1.2.3.4.5.aspx.cs">
       <DependentUpon>test1_1.2.3.4.5.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -409,6 +436,67 @@
     <Compile Include="test3\test3_9.aspx.designer.cs">
       <DependentUpon>test3_9.aspx</DependentUpon>
     </Compile>
+    <Compile Include="test4\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\bananadata.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bananadata.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="test4\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\productadd.aspx.cs">
+      <DependentUpon>productadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\productadd.aspx.designer.cs">
+      <DependentUpon>productadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\user.aspx.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\user.aspx.designer.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\useradd.aspx.cs">
+      <DependentUpon>useradd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\useradd.aspx.designer.cs">
+      <DependentUpon>useradd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user.Master.cs">
+      <DependentUpon>user.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user.Master.designer.cs">
+      <DependentUpon>user.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataStudent.dbml">
@@ -428,6 +516,16 @@
     <Content Include="test2\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Content>
+    <Content Include="Site1.Master" />
+    <Content Include="user.Master" />
+    <Content Include="test4\bananadata.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>bananadata.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="test4\bananadata.dbml.layout">
+      <DependentUpon>bananadata.dbml</DependentUpon>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
