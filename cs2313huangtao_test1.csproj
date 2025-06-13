@@ -85,9 +85,13 @@
     <Content Include="KSimage\hwatch-ultra.jpg" />
     <Content Include="KSimage\imformation.jpg" />
     <Content Include="KSimage\logo.png" />
+    <Content Include="KSimage\MAC\Mac_air.jpg" />
+    <Content Include="KSimage\MAC\Mac_pro.jpg" />
     <Content Include="KSimage\research.png" />
     <Content Include="KSimage\watch-pride.png" />
     <Content Include="KSimage\watch-s10.jpg" />
+    <Content Include="KSimage\xlarge.mp4" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="test1\image\东西.jpg" />
     <Content Include="test1\image\信息管理系.jpg" />
     <Content Include="test1\image\听听.jpg" />
@@ -136,10 +140,13 @@
     <Content Include="test3\test3_8.aspx" />
     <Content Include="test3\test3_9.aspx" />
     <Content Include="test4\admin.aspx" />
+    <Content Include="test4\buycar.aspx" />
     <Content Include="test4\home.aspx" />
+    <Content Include="test4\home_categoty.aspx" />
     <Content Include="test4\login.aspx" />
     <Content Include="test4\productadd.aspx" />
     <Content Include="test4\register.aspx" />
+    <Content Include="test4\test.aspx" />
     <Content Include="test4\user.aspx" />
     <Content Include="test4\useradd.aspx" />
     <Content Include="Web.config" />
@@ -448,12 +455,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bananadata.dbml</DependentUpon>
     </Compile>
+    <Compile Include="test4\buycar.aspx.cs">
+      <DependentUpon>buycar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\buycar.aspx.designer.cs">
+      <DependentUpon>buycar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="test4\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="test4\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\home_categoty.aspx.cs">
+      <DependentUpon>home_categoty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\home_categoty.aspx.designer.cs">
+      <DependentUpon>home_categoty.aspx</DependentUpon>
     </Compile>
     <Compile Include="test4\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -475,6 +496,13 @@
     </Compile>
     <Compile Include="test4\register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="test4\user.aspx.cs">
       <DependentUpon>user.aspx</DependentUpon>
