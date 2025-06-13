@@ -24,6 +24,7 @@ namespace cs2313huangtao_test1.test4
             var result =(from i in db.Users
                         where i.PhoneNumber == name
                         select i).FirstOrDefault();
+            Response.Write(result.PhoneNumber+"a"+result.UserPassword);
             if (result == null)
             {
                 var re = (from i in db.Admins
@@ -33,16 +34,18 @@ namespace cs2313huangtao_test1.test4
                     Label1.Text = "账号不存在";
                 else
                 {
-                    if (re.UserPassword != txtPassword.Text) { Label1.Text = "密码错误";return; }
+                    if (re.UserPassword != txtPassword.Text) { Label1.Text = "管理员密码错误";return; }
                     Session.Contents["name"]=re.UserName;
+                    Session.Contents["userid"] = re.UserId;
                     Session.Contents["userphone"] = name;
                     Response.Redirect("admin.aspx");
                 }
             }
             else 
             {
-                if (result.UserPassword != txtPassword.Text) { Label1.Text = "密码错误"; return; }
+                if (result.UserPassword != txtPassword.Text) { Label1.Text = "用户密码错误"; return; }
                 Session.Contents["name"]=result.UserName;
+                Session.Contents["UserId"] = result.UserId;
                 Session.Contents["userphone"] = name;
                 Response.Redirect("home.aspx");
             }              

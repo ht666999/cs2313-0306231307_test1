@@ -16,33 +16,57 @@ namespace cs2313huangtao_test1.test4
         public void Add_click(object sender, EventArgs e) 
         {
             Button clickedButton = (Button)sender;
-            int index = int.Parse(clickedButton.CommandArgument); // 获取商品索引
+            int index = int.Parse(clickedButton.CommandArgument);
+            // 获取商品索引
             //try
             //{
-                if (Session["userphone"] != null)
+            int uid, pid ;
+            pid = products[index].ProductID;
+            if (Session["userphone"] != null)
                 {
-                    string nameid = Session["userphone"].ToString();
-                    Response.Redirect("buycar.aspx?phone=" + nameid + "&pid=" + products[index].CategoryID);
+                uid = int.Parse(Session["userid"].ToString());                                     
                 }
                 else 
                 {
-                    Response.Redirect("buycar.aspx?phone=12345678910&pid=" + products[index].CategoryID);
-
+                    uid = 1;
                 }
-             //}
+            var upid = (from i in db.Cart
+                        where i.ProductID == pid & i.UserID == uid
+                        select i).FirstOrDefault();
+            if (upid == null)
+            {
+                Cart cart = new Cart();
+                cart.ProductID = pid;
+                cart.UserID = uid;
+                cart.Quantity = 1;
+                db.Cart.InsertOnSubmit(cart);
+                db.SubmitChanges();
+            }
+            else
+            {
+                upid.Quantity += 1;
+                db.SubmitChanges();
+
+            }
+            Response.Redirect("buycar.aspx?uid=" + uid + "&pid=" + products[index].ProductID);
+            //}
             //catch (Exception ex) 
             //{
             //    Response.Redirect("login.aspx");
             //}
 
-                
+
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            int category=int.Parse(Request.QueryString["categoty"]);
             var result = (from i in db.Products
-                          where i.CategoryID == 1
+                          where i.CategoryID == category
                           select i).Distinct().ToList();
             products=result;
+            string path = "../KSimage/"+category+".mp4";
+
+            videosource.Attributes["src"]=path;
             for (int i = 0; i < result.Count; i++)
             {
                 

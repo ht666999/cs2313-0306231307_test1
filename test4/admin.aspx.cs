@@ -60,9 +60,9 @@ namespace cs2313huangtao_test1.test4
         protected void Button4_Click(object sender, EventArgs e)
         {
             Gvvisible();
-            GVcategory.SelectedIndex=-1;
-            GVproduct.DataSource = null;
-            GVproduct.DataSourceID = "product";
+            //GVcategory.SelectedIndex = -1;
+            //GVproduct.DataSource = null;
+            //GVproduct.DataSourceID = "product";
             GVproduct.DataBind();
             GVcategory.Visible =true;
             GVproduct.Visible=true;
@@ -71,12 +71,12 @@ namespace cs2313huangtao_test1.test4
 
         protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
         {
-                var result = from i in db.Products
-                             where GVcategory.SelectedValue.ToString() == i.CategoryID.ToString()
-                             select i;
-                GVproduct.DataSourceID = null;
-                GVproduct.DataSource = result;
-                GVproduct.DataBind();
+                //var result = from i in db.Products
+                //             where GVcategory.SelectedValue.ToString() == i.CategoryID.ToString()
+                //             select i;
+                //GVproduct.DataSourceID = null;
+                //GVproduct.DataSource = result;
+                //GVproduct.DataBind();
             
         }
 

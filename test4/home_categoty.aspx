@@ -5,8 +5,8 @@
         <tr>
             <td colspan="4" style="width: 76px">
                     <div style="text-align:center">
-                    <video width="1480" height="840"  controls autoplay loop muted>
-                    <source src="../KSimage/xlarge.mp4" type="video/mp4">
+                    <video id="video1" width="1480" height="840"  controls autoplay loop muted runat="server">
+                    <source type="video/mp4" runat ="server" id="videosource">
                     </video>
                     </div>                            
             </td>

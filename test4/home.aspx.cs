@@ -16,7 +16,52 @@ namespace cs2313huangtao_test1.test4
 
         protected void Unnamed1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("admin.aspx");
+            Response.Redirect("home_categoty.aspx?name=categoty=2");
+        }
+
+        protected void Unnamed1_Click1(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=1");
+        }
+
+        protected void Unnamed2_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=2");
+        }
+
+        protected void Unnamed3_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=4");
+        }
+
+        protected void Unnamed4_DataBinding(object sender, EventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=3");
+        }
+
+        protected void Unnamed5_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=3");
+        }
+
+        protected void Unnamed7_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=4");
+        }
+
+        protected void Unnamed8_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=1");
+        }
+
+        protected void Unnamed9_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=3");
+        }
+
+        protected void Unnamed4_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("home_categoty.aspx?categoty=3");
         }
     }
 }

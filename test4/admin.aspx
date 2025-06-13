@@ -72,30 +72,29 @@
         <SortedDescendingCellStyle BackColor="#E9EBEF" />
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
-    <asp:GridView ID="GVproduct" runat="server" CellPadding="4" DataSourceID="product" ForeColor="#333333" GridLines="None" style="margin:0 auto;width:auto">
-        <AlternatingRowStyle BackColor="White" />
+    <asp:GridView ID="GVproduct" runat="server" DataSourceID="product" DataKeyNames="ProductID" AutoGenerateColumns="False">
         <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:BoundField DataField="ProductID" HeaderText="ProductID" InsertVisible="False" ReadOnly="True" SortExpression="ProductID" />
+            <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
+            <asp:BoundField DataField="ImageURL" HeaderText="ImageURL" SortExpression="ImageURL" />
+            <asp:BoundField DataField="Memory" HeaderText="Memory" SortExpression="Memory" />
+            <asp:BoundField DataField="Storage" HeaderText="Storage" SortExpression="Storage" />
+            <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
+            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+            <asp:BoundField DataField="CategoryID" HeaderText="CategoryID" SortExpression="CategoryID" />
+            <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
+            <asp:BoundField DataField="Remark" HeaderText="Remark" SortExpression="Remark" />
         </Columns>
-        <EditRowStyle BackColor="#2461BF" />
-        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#EFF3FB" />
-        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-        <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
     <asp:Button ID="Button6" runat="server" Text="添加商品" />
     <asp:LinqDataSource ID="admins" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Admins">
     </asp:LinqDataSource>
     <asp:LinqDataSource ID="userdata" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Users">
     </asp:LinqDataSource>
-    <asp:LinqDataSource ID="product" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Products">
-    </asp:LinqDataSource>
     <asp:LinqDataSource ID="category" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Categories">
+    </asp:LinqDataSource>
+    <asp:LinqDataSource ID="product" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Products">
     </asp:LinqDataSource>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="FooterLinks" runat="server">
