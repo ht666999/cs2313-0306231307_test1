@@ -23,5 +23,10 @@ namespace cs2313huangtao_test1
         {
             Response.Redirect("user.aspx");
         }
+
+        protected void ImgBtn3_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("buycar.aspx?uid=" + Session["userid"].ToString());
+        }
     }
 }

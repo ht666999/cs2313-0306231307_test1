@@ -7,15 +7,19 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <table style="width: 100%">
         <tr>
-            <td>昵称：</td>
+            <td>昵称：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>账号：</td>
+            <td>账号：<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 32px">订单：</td>
+            <td style="height: 32px">
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
+            </td>
             <td style="height: 32px"></td>
         </tr>
         <tr>

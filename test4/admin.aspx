@@ -74,7 +74,7 @@
     </asp:GridView>
     <asp:GridView ID="GVproduct" runat="server" DataSourceID="product" DataKeyNames="ProductID" AutoGenerateColumns="False">
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="ProductID" HeaderText="ProductID" InsertVisible="False" ReadOnly="True" SortExpression="ProductID" />
             <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
             <asp:BoundField DataField="ImageURL" HeaderText="ImageURL" SortExpression="ImageURL" />
@@ -94,7 +94,10 @@
     </asp:LinqDataSource>
     <asp:LinqDataSource ID="category" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Categories">
     </asp:LinqDataSource>
-    <asp:LinqDataSource ID="product" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Products">
+    <asp:LinqDataSource ID="product" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Products" Where="CategoryID == Convert.ToInt32(@CategoryID)">
+        <WhereParameters>
+            <asp:ControlParameter ControlID="GVcategory" Name="CategoryID" PropertyName="SelectedValue" Type="Int32" />
+        </WhereParameters>
     </asp:LinqDataSource>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="FooterLinks" runat="server">

@@ -16,7 +16,7 @@ namespace cs2313huangtao_test1.test4
 
         protected void Unnamed1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("home_categoty.aspx?name=categoty=2");
+            Response.Redirect("home_categoty.aspx?categoty=2");
         }
 
         protected void Unnamed1_Click1(object sender, ImageClickEventArgs e)

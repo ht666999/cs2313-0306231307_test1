@@ -7,16 +7,6 @@
       <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Cart" Member="Cart">
-    <Type Name="Cart">
-      <Column Name="CartID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Users_Cart" Member="Users" ThisKey="UserID" OtherKey="UserId" Type="Users" IsForeignKey="true" />
-      <Association Name="Products_Cart" Member="Products" ThisKey="ProductID" OtherKey="ProductID" Type="Products" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Categories" Member="Categories">
     <Type Name="Categories">
       <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -51,7 +41,6 @@
       <Column Name="UserName" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="UserPassword" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
       <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Association Name="Users_Cart" Member="Cart" ThisKey="UserId" OtherKey="UserID" Type="Cart" />
       <Association Name="Users_Orders" Member="Orders" ThisKey="UserId" OtherKey="UserID" Type="Orders" />
     </Type>
   </Table>
@@ -67,9 +56,19 @@
       <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Remark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Products_Cart" Member="Cart" ThisKey="ProductID" OtherKey="ProductID" Type="Cart" />
       <Association Name="Products_OrderItems" Member="OrderItems" ThisKey="ProductID" OtherKey="ProductID" Type="OrderItems" />
+      <Association Name="Products_Cart" Member="Cart" ThisKey="ProductID" OtherKey="ProductID" Type="Cart" />
       <Association Name="Categories_Products" Member="Categories" ThisKey="CategoryID" OtherKey="CategoryID" Type="Categories" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cart" Member="Cart">
+    <Type Name="Cart">
+      <Column Name="CartID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Products_Cart" Member="Products" ThisKey="ProductID" OtherKey="ProductID" Type="Products" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

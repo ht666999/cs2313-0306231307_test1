@@ -12,11 +12,19 @@ namespace cs2313huangtao_test1.test4
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text ="欢迎"+ Session["name"].ToString()+"!";
+            Label2.Text=Session["name"].ToString();
+            Label3.Text=Session["userphone"].ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("login.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string str = Session["userid"].ToString();
+            Response.Redirect("buycar.aspx?uid="+str);
         }
     }
 }

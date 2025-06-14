@@ -25,7 +25,7 @@
      <span class="divider-text">或</span>
  </div>
  
- <a href="register.aspx" class="action-link">创建Banana ID</a>
+ <a href="useradd.aspx?flag=1" class="action-link">创建Banana ID</a>
 </asp:Content>
 
 

@@ -39,7 +39,9 @@
                 </asp:GridView>
             </td>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="Button" CssClass="btn-style" />
+                <asp:Button ID="Button2" runat="server" Text="结账" CssClass="btn-style" OnClick="Button2_Click" />
+                <asp:GridView ID="GridView2" runat="server">
+                </asp:GridView>
             </td>
         </tr>
         <tr>

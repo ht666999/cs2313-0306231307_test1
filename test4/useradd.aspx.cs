@@ -28,11 +28,14 @@ namespace cs2313huangtao_test1.test4
                 var result = (from id in db.Admins
                               where id.PhoneNumber == newuser.PhoneNumber
                               select newuser).FirstOrDefault();
-                var result1 = db.Users.Select(x => x.PhoneNumber == newuser.PhoneNumber);
+                var result1 = (from id in db.Admins
+                               where id.PhoneNumber == newuser.PhoneNumber
+                               select newuser).FirstOrDefault();
                 if (result == null&&result1==null)
                 {
                     db.Admins.InsertOnSubmit(newuser);
                     db.SubmitChanges();
+                    Label1.Text = "添加成功";
                 }
                 else Label1.Text = "该账号已存在！";
             }
@@ -45,13 +48,18 @@ namespace cs2313huangtao_test1.test4
                 var result = (from id in   db.Users 
                               where id.PhoneNumber == newuser.PhoneNumber
                               select newuser).FirstOrDefault();
-                var result1 = db.Admins.Select(u => u.PhoneNumber == newuser.PhoneNumber);
+                var result1 = (from id in db.Admins
+                               where id.PhoneNumber == newuser.PhoneNumber
+                               select newuser).FirstOrDefault();
                 if (result == null&&result1==null)
                 {
                     db.Users.InsertOnSubmit(newuser);
                     db.SubmitChanges();
+                    Label1.Text = "注册成功！";
+                    try { int flag = int.Parse(Request.QueryString["flag"].ToString()); if (flag == 1) { Response.Redirect("login.aspx"); } }
+                    catch { Label1.Text = "用户添加成功！"; }
                 }
-                else Label1.Text = "该账号已存在！";
+                else Label1.Text = "该用户已存在！";
             }
         }
 

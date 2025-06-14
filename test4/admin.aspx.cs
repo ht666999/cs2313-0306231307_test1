@@ -33,7 +33,7 @@ namespace cs2313huangtao_test1.test4
                 {
                     var result = (from i in db.Admins
                                   where i.PhoneNumber == Session["userphone"].ToString()
-                                  select i).First();
+                                  select i).FirstOrDefault();
                     name = result.UserName;
                 }
 
@@ -63,7 +63,7 @@ namespace cs2313huangtao_test1.test4
             //GVcategory.SelectedIndex = -1;
             //GVproduct.DataSource = null;
             //GVproduct.DataSourceID = "product";
-            GVproduct.DataBind();
+           // GVproduct.DataBind();
             GVcategory.Visible =true;
             GVproduct.Visible=true;
             Button6.Visible =true;

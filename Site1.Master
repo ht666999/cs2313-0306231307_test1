@@ -102,10 +102,7 @@
         }
         .auto-style2 {
         }
-        .auto-style3 {
-            height: 32px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -114,27 +111,28 @@
                 <td class="logo-container">
                     <asp:Image ID="Img1" runat="server" CssClass="logo" ImageUrl="~/KSimage/logo.png" />
                     <asp:Label ID="Lbl1" runat="server" CssClass="nav-item" Text="hStore"></asp:Label>
+                    
                 </td>
                 
                 <td>
-                    <asp:Label ID="Lbl2" runat="server" CssClass="nav-item" Text="hMac"></asp:Label>
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="nav-item" Nrunat="server" NavigateUrl="~/test4/home_categoty.aspx?categoty=1">hMac</asp:HyperLink>
                 </td>
                 
                 <td>
-                    <asp:Label ID="Lbl3" runat="server" CssClass="nav-item" Text="hPhone"></asp:Label>
+                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="nav-item" Nrunat="server" NavigateUrl="~/test4/home_categoty.aspx?categoty=2">hPhone</asp:HyperLink>
+
+                    
                 </td>
                 
                 <td>
-                    <asp:Label ID="Lbl4" runat="server" CssClass="nav-item" Text="hWatch"></asp:Label>
+                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="nav-item" Nrunat="server" NavigateUrl="~/test4/home_categoty.aspx?categoty=3">hWatch</asp:HyperLink>
                 </td>
                 
                 <td>
-                    <asp:Label ID="Lbl5" runat="server" CssClass="nav-item" Text="hPad"></asp:Label>
+                    <asp:HyperLink ID="HyperLink4" runat="server" CssClass="nav-item" Nrunat="server" NavigateUrl="~/test4/home_categoty.aspx?categoty=4">hPad</asp:HyperLink>
                 </td>
                 
-                <td>
-                    <asp:Label ID="Lbl6" runat="server" CssClass="nav-item" Text="hAccessories"></asp:Label>
-                </td>
+
                 
                 <td style="width: 250px;">
                     <div class="search-container">
@@ -146,7 +144,7 @@
                 <td style="width: 250px;">
                     <asp:ImageButton ID="ImgBtn2" runat="server" ImageUrl="~/KSimage/imformation.jpg" Height="50px" Width="50px" CssClass="logo" OnClick="ImgBtn2_Click" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:ImageButton ID="ImgBtn3" runat="server" Height="50px" ImageUrl="~/KSimage/buycar.jpg" Width="50px" Cssclass="logo"/>
+                    <asp:ImageButton ID="ImgBtn3" runat="server" Height="50px" ImageUrl="~/KSimage/buycar.jpg" Width="50px" Cssclass="logo" OnClick="ImgBtn3_Click"/>
                 </td>
             </tr>
         </table>

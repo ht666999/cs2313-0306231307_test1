@@ -39,6 +39,7 @@ namespace cs2313huangtao_test1.test4
                 cart.ProductID = pid;
                 cart.UserID = uid;
                 cart.Quantity = 1;
+                cart.flag = 0;
                 db.Cart.InsertOnSubmit(cart);
                 db.SubmitChanges();
             }
