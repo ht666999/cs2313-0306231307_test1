@@ -31,7 +31,7 @@ namespace cs2313huangtao_test1.test4
                     uid = 1;
                 }
             var upid = (from i in db.Cart
-                        where i.ProductID == pid & i.UserID == uid
+                        where i.ProductID == pid & i.UserID == uid & i.flag == 0
                         select i).FirstOrDefault();
             if (upid == null)
             {
@@ -49,6 +49,7 @@ namespace cs2313huangtao_test1.test4
                 db.SubmitChanges();
 
             }
+            //Response.Write( products[index].ProductID);
             Response.Redirect("buycar.aspx?uid=" + uid + "&pid=" + products[index].ProductID);
             //}
             //catch (Exception ex) 
@@ -62,8 +63,8 @@ namespace cs2313huangtao_test1.test4
         {
             int category=int.Parse(Request.QueryString["categoty"]);
             var result = (from i in db.Products
-                          where i.CategoryID == category
-                          select i).Distinct().ToList();
+                          where i.CategoryID == category & i.Quantity>0
+                          select i).ToList();
             products=result;
             string path = "../KSimage/"+category+".mp4";
 

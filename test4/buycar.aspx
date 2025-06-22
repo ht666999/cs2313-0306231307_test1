@@ -5,7 +5,7 @@
 
     <table class="auto-style1">
         <tr>
-            <td>
+            <td style="height: 233px">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand" >
                     <Columns>                        
                         <asp:BoundField DataField="ProductName" HeaderText="商品名称" />
@@ -38,15 +38,15 @@
                     </Columns>
                 </asp:GridView>
             </td>
+            <td style="height: 233px">
+                &nbsp;</td>
+        </tr>
+        <tr>
             <td>
                 <asp:Button ID="Button2" runat="server" Text="结账" CssClass="btn-style" OnClick="Button2_Click" />
                 <asp:GridView ID="GridView2" runat="server">
                 </asp:GridView>
             </td>
-        </tr>
-        <tr>
-            <td>
-                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>

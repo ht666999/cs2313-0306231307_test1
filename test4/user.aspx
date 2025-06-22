@@ -18,12 +18,14 @@
         </tr>
         <tr>
             <td style="height: 32px">
-                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="查看购物车" />
             </td>
             <td style="height: 32px"></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="查看订单" />
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>

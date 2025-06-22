@@ -26,5 +26,11 @@ namespace cs2313huangtao_test1.test4
             string str = Session["userid"].ToString();
             Response.Redirect("buycar.aspx?uid="+str);
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            string str = Session["userid"].ToString();
+            Response.Redirect("buycar.aspx?uid=" + str);
+        }
     }
 }
