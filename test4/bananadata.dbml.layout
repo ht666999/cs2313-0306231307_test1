@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bananadata">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="bananadata">
   <DataContextMoniker Name="/bananadataDataContext" />
   <nestedChildShapes>
-    <classShape Id="1332a213-551f-4cf5-83c8-8f06089c4ced" absoluteBounds="3, 1.125, 2, 1.5373050944010416">
+    <classShape Id="1332a213-551f-4cf5-83c8-8f06089c4ced" absoluteBounds="2.125, 1.125, 2, 1.5373050944010416">
       <DataClassMoniker Name="/bananadataDataContext/Admins" />
       <nestedChildShapes>
-        <elementListCompartment Id="43102826-acf4-49c3-ae84-060f4d925769" absoluteBounds="3.015, 1.585, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="43102826-acf4-49c3-ae84-060f4d925769" absoluteBounds="2.14, 1.585, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9dcd92b9-231b-49d9-9a7d-2f72a20e0bff" absoluteBounds="1.5, 6.125, 2, 1.1677168782552083">
+    <classShape Id="9dcd92b9-231b-49d9-9a7d-2f72a20e0bff" absoluteBounds="0.875, 6.875, 2, 1.1677168782552083">
       <DataClassMoniker Name="/bananadataDataContext/Categories" />
       <nestedChildShapes>
-        <elementListCompartment Id="e3953330-287f-40df-964b-a4c9f29a1b49" absoluteBounds="1.5150000000000001, 6.585, 1.9700000000000002, 0.60771687825520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e3953330-287f-40df-964b-a4c9f29a1b49" absoluteBounds="0.89000000000000012, 7.335, 1.9700000000000002, 0.60771687825520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="a929cf19-d34a-4d63-a02b-d5251ac7887f" absoluteBounds="8.375, 4.75, 2, 1.7220992024739581">
@@ -39,45 +39,51 @@
         <elementListCompartment Id="e9d77994-0ce7-4a8c-ba0f-c5072ef189a0" absoluteBounds="0.64, 4.335, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.625 : 3.875); (1.625 : 2.95615254720052); (7.5 : 2.95615254720052)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.625 : 4.33115504720052); (6.26041666666667 : 4.33115504720052 : JumpStart); (6.42708333333333 : 4.33115504720052 : JumpEnd); (7.90625 : 4.33115504720052); (7.90625 : 3.91230509440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/bananadataDataContext/Users/Users_Orders" />
       <nodes>
         <classShapeMoniker Id="2af9fa57-092e-4e05-924e-694503dfe55a" />
         <classShapeMoniker Id="6f4f321b-c08d-45cc-b12b-55cac3477492" />
       </nodes>
     </associationConnector>
-    <classShape Id="27871004-8a57-419d-aee7-7c7bfe82db81" absoluteBounds="4.375, 5.375, 2, 2.6460697428385416">
+    <classShape Id="27871004-8a57-419d-aee7-7c7bfe82db81" absoluteBounds="5.5, 6.625, 2, 2.6460697428385416">
       <DataClassMoniker Name="/bananadataDataContext/Products" />
       <nestedChildShapes>
-        <elementListCompartment Id="e7f827be-1563-4934-a702-a7d508329774" absoluteBounds="4.39, 5.835, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e7f827be-1563-4934-a702-a7d508329774" absoluteBounds="5.515, 7.085, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.375 : 5.92354960123698); (8.375 : 5.92354960123698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.5 : 7.94803487141927); (9.375 : 7.94803487141927); (9.375 : 6.47209920247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/bananadataDataContext/Products/Products_OrderItems" />
       <nodes>
         <classShapeMoniker Id="27871004-8a57-419d-aee7-7c7bfe82db81" />
         <classShapeMoniker Id="a929cf19-d34a-4d63-a02b-d5251ac7887f" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.5 : 6.7088584391276); (4.375 : 6.7088584391276)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.875 : 7.4588584391276); (5.5 : 7.4588584391276)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/bananadataDataContext/Categories/Categories_Products" />
       <nodes>
         <classShapeMoniker Id="9dcd92b9-231b-49d9-9a7d-2f72a20e0bff" />
         <classShapeMoniker Id="27871004-8a57-419d-aee7-7c7bfe82db81" />
       </nodes>
     </associationConnector>
-    <classShape Id="3a47a942-7541-474b-ab88-e489dbd7c506" absoluteBounds="5, 3.25, 2, 1.7220992024739581">
+    <classShape Id="39fd3b2d-160e-4bca-b321-d69403547152" absoluteBounds="4.875, 2, 2, 1.9068933105468751">
       <DataClassMoniker Name="/bananadataDataContext/Cart" />
       <nestedChildShapes>
-        <elementListCompartment Id="ddb44c87-ef1d-45b2-84a4-2664eb1d7fbd" absoluteBounds="5.015, 3.71, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4bae0482-547c-4e07-810b-49050c90d4e9" absoluteBounds="4.89, 2.46, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.6875 : 5.375); (5.6875 : 4.97209920247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.34375 : 6.625); (6.34375 : 3.90689331054688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/bananadataDataContext/Products/Products_Cart" />
       <nodes>
         <classShapeMoniker Id="27871004-8a57-419d-aee7-7c7bfe82db81" />
-        <classShapeMoniker Id="3a47a942-7541-474b-ab88-e489dbd7c506" />
+        <classShapeMoniker Id="39fd3b2d-160e-4bca-b321-d69403547152" />
       </nodes>
     </associationConnector>
+    <classShape Id="931fb741-7e27-476e-a856-37103dd45634" absoluteBounds="3, 5.125, 2, 1.7220992024739581">
+      <DataClassMoniker Name="/bananadataDataContext/pj" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e5c5d0d-3cfb-4ce9-91cb-4e2cf5448fb6" absoluteBounds="3.015, 5.585, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

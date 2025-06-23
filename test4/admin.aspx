@@ -87,7 +87,7 @@
             <asp:BoundField DataField="Remark" HeaderText="Remark" SortExpression="Remark" />
         </Columns>
     </asp:GridView>
-    <asp:Button ID="Button6" runat="server" Text="添加商品" />
+    <asp:Button ID="Button6" runat="server" Text="添加商品" OnClick="Button6_Click" />
     <asp:LinqDataSource ID="admins" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Admins">
     </asp:LinqDataSource>
     <asp:LinqDataSource ID="userdata" runat="server" ContextTypeName="cs2313huangtao_test1.test4.bananadataDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Users">

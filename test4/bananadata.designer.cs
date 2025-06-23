@@ -51,10 +51,13 @@ namespace cs2313huangtao_test1.test4
     partial void InsertCart(Cart instance);
     partial void UpdateCart(Cart instance);
     partial void DeleteCart(Cart instance);
+    partial void Insertpj(pj instance);
+    partial void Updatepj(pj instance);
+    partial void Deletepj(pj instance);
     #endregion
 		
 		public bananadataDataContext() : 
-				base("Data Source = T; Initial Catalog = Banana; Integrated Security = True", mappingSource)
+				base("Data Source=T;Initial Catalog=Banana;Integrated Security=True", mappingSource)
 		{
 			OnCreated();
 		}
@@ -130,6 +133,14 @@ namespace cs2313huangtao_test1.test4
 			get
 			{
 				return this.GetTable<Cart>();
+			}
+		}
+		
+		public System.Data.Linq.Table<pj> pj
+		{
+			get
+			{
+				return this.GetTable<pj>();
 			}
 		}
 	}
@@ -1378,6 +1389,8 @@ namespace cs2313huangtao_test1.test4
 		
 		private System.Nullable<int> _flag;
 		
+		private System.Nullable<System.DateTime> _date;
+		
 		private EntityRef<Products> _Products;
 		
     #region 可扩展性方法定义
@@ -1394,6 +1407,8 @@ namespace cs2313huangtao_test1.test4
     partial void OnQuantityChanged();
     partial void OnflagChanging(System.Nullable<int> value);
     partial void OnflagChanged();
+    partial void OndateChanging(System.Nullable<System.DateTime> value);
+    partial void OndateChanged();
     #endregion
 		
 		public Cart()
@@ -1506,6 +1521,26 @@ namespace cs2313huangtao_test1.test4
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="Date")]
+		public System.Nullable<System.DateTime> date
+		{
+			get
+			{
+				return this._date;
+			}
+			set
+			{
+				if ((this._date != value))
+				{
+					this.OndateChanging(value);
+					this.SendPropertyChanging();
+					this._date = value;
+					this.SendPropertyChanged("date");
+					this.OndateChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Products_Cart", Storage="_Products", ThisKey="ProductID", OtherKey="ProductID", IsForeignKey=true)]
 		public Products Products
 		{
@@ -1536,6 +1571,164 @@ namespace cs2313huangtao_test1.test4
 						this._ProductID = default(int);
 					}
 					this.SendPropertyChanged("Products");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.pj")]
+	public partial class pj : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.Nullable<int> _uid;
+		
+		private System.Nullable<int> _pid;
+		
+		private string _pj1;
+		
+		private System.Nullable<System.DateTime> _date;
+		
+		private int _pjid;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuidChanging(System.Nullable<int> value);
+    partial void OnuidChanged();
+    partial void OnpidChanging(System.Nullable<int> value);
+    partial void OnpidChanged();
+    partial void Onpj1Changing(string value);
+    partial void Onpj1Changed();
+    partial void OndateChanging(System.Nullable<System.DateTime> value);
+    partial void OndateChanged();
+    partial void OnpjidChanging(int value);
+    partial void OnpjidChanged();
+    #endregion
+		
+		public pj()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uid", DbType="Int")]
+		public System.Nullable<int> uid
+		{
+			get
+			{
+				return this._uid;
+			}
+			set
+			{
+				if ((this._uid != value))
+				{
+					this.OnuidChanging(value);
+					this.SendPropertyChanging();
+					this._uid = value;
+					this.SendPropertyChanged("uid");
+					this.OnuidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pid", DbType="Int")]
+		public System.Nullable<int> pid
+		{
+			get
+			{
+				return this._pid;
+			}
+			set
+			{
+				if ((this._pid != value))
+				{
+					this.OnpidChanging(value);
+					this.SendPropertyChanging();
+					this._pid = value;
+					this.SendPropertyChanged("pid");
+					this.OnpidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="pj", Storage="_pj1", DbType="NVarChar(50)")]
+		public string pj1
+		{
+			get
+			{
+				return this._pj1;
+			}
+			set
+			{
+				if ((this._pj1 != value))
+				{
+					this.Onpj1Changing(value);
+					this.SendPropertyChanging();
+					this._pj1 = value;
+					this.SendPropertyChanged("pj1");
+					this.Onpj1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="Date")]
+		public System.Nullable<System.DateTime> date
+		{
+			get
+			{
+				return this._date;
+			}
+			set
+			{
+				if ((this._date != value))
+				{
+					this.OndateChanging(value);
+					this.SendPropertyChanging();
+					this._date = value;
+					this.SendPropertyChanged("date");
+					this.OndateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pjid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int pjid
+		{
+			get
+			{
+				return this._pjid;
+			}
+			set
+			{
+				if ((this._pjid != value))
+				{
+					this.OnpjidChanging(value);
+					this.SendPropertyChanging();
+					this._pjid = value;
+					this.SendPropertyChanged("pjid");
+					this.OnpjidChanged();
 				}
 			}
 		}

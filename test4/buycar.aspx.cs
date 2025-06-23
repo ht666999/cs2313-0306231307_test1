@@ -1,6 +1,7 @@
 ﻿using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Web;
@@ -13,13 +14,13 @@ namespace cs2313huangtao_test1.test4
     {
         bananadataDataContext db=new bananadataDataContext();
         //
-        string uid;
+        static int uid;
+        static int pid;
         private void zd()
         {
-            uid = Request.QueryString["uid"].ToString();
-
+            
             var usercar = from i in db.Cart
-                          where i.UserID == int.Parse(uid) & i.flag == 1
+                          where i.UserID == uid & i.flag == 1
                           select i;
 
             var result = from i in db.Products
@@ -28,11 +29,13 @@ namespace cs2313huangtao_test1.test4
                          select new
                          {
 
-                             j.CartID,
-                             i.ProductName,
-                             i.Price,
-                             j.Quantity,
-                             sum =i.Price * j.Quantity,
+                             i.ProductID,
+                             产品名称= i.ProductName,
+                             ImageURL= i.ImageURL,
+                             价格=i.Price,
+                             数量=j.Quantity,
+
+                             总金额=i.Price * j.Quantity,
                          };
 
             GridView2.DataSource = result;
@@ -40,12 +43,11 @@ namespace cs2313huangtao_test1.test4
         }
         private void BindGridView()
         {
-            //string phone = Request.QueryString["phone"].ToString();
-            //string pid = Request.QueryString["pid"].ToString();
-            uid=Request.QueryString["uid"].ToString();
+            
+            uid=int.Parse(Request.QueryString["uid"].ToString());
 
             var usercar = from i in db.Cart
-                          where i.UserID == int.Parse(uid) & i.flag == 0
+                          where i.UserID == uid & i.flag == 0
                           select i;
            
             var result = from i in db.Products
@@ -58,6 +60,7 @@ namespace cs2313huangtao_test1.test4
                              i.ProductName,
                              i.Price,
                              j.Quantity,
+                             ImageURL=i.ImageURL,
                              sum = i.Price*j.Quantity,                           
                          };
 
@@ -69,8 +72,9 @@ namespace cs2313huangtao_test1.test4
             
             if (!IsPostBack)
             {
+                
+                BindGridView();
                 zd();
-                BindGridView(); 
             }
            
         }
@@ -88,7 +92,21 @@ namespace cs2313huangtao_test1.test4
                           select i).First();
             switch (e.CommandName)
             {
-                case "Increase": { result.Quantity += 1; break; }
+                case "Increase": 
+                    {
+                        var sum=(from i in db.Products
+                                where i.ProductID == result.ProductID
+                                select i).First();
+                        if (sum.Quantity > 0)
+                        { 
+                            result.Quantity += 1; break;
+                        }
+                        else 
+                        {
+                            Response.Write("库存不足"); 
+                            break;
+                        }
+                    }
                 case "Decrease":
                     {
                         if (result.Quantity > 1)
@@ -114,9 +132,9 @@ namespace cs2313huangtao_test1.test4
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            uid = Request.QueryString["uid"].ToString();
+            
             var usercar = (from i in db.Cart
-                           where i.UserID == int.Parse(uid) & i.flag == 0
+                           where i.UserID == uid & i.flag == 0
                            select i);
 
             var kucun = from i in db.Products
@@ -132,20 +150,44 @@ namespace cs2313huangtao_test1.test4
             {
                 if (i.kc < i.sl) flag = false;
             }
-            if (flag) 
-            { 
+            if (flag)
+            {
 
-                foreach (var i in usercar) 
+                foreach (var i in usercar)
                 {
                     i.flag = 1;
                     var p = (from j in db.Products
-                            where j.ProductID == i.ProductID
-                            select j).First();
-                    p.Quantity-=i.Quantity;  
-                }                
+                             where j.ProductID == i.ProductID
+                             select j).First();
+                    p.Quantity -= i.Quantity;
+                }
             }
-            db.SubmitChanges();
+            else { Response.Write("库存不足！"); }
+                db.SubmitChanges();
             BindGridView();           
+        }
+
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            TextBox1.Visible=true;
+            Button3.Visible=true;
+            pid=int.Parse(e.CommandArgument.ToString());
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            string str=TextBox1.Text;
+            int id = pid;
+            
+            pj pj1 = new pj();
+            pj1.uid = uid;
+            pj1.pid = pid;
+            pj1.pj1 = str;
+            pj1.date = DateTime.Now;
+            db.pj.InsertOnSubmit(pj1);
+            db.SubmitChanges();
+            TextBox1.Visible=false;
+            Button3.Visible = false;
         }
     }
 }

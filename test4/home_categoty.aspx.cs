@@ -68,6 +68,7 @@ namespace cs2313huangtao_test1.test4
             products=result;
             string path = "../KSimage/"+category+".mp4";
 
+            
             videosource.Attributes["src"]=path;
             for (int i = 0; i < result.Count; i++)
             {
@@ -87,7 +88,20 @@ namespace cs2313huangtao_test1.test4
                 addbtn.CssClass = "selectbutton";
                 addbtn.Click += Add_click;
 
-                string str=result[i].ProductName+"\n内存："+result[i].Memory+"\n存储："+result[i].Storage+"\n颜色："+result[i].Color+"\n价格："+result[i].Price;
+                string na="评论区：\n" ;
+                var pjresult=(from  k in db.pj
+                              where result[i].ProductID==k.pid
+                              select k).ToList();
+               
+                for (int k = 0; k < pjresult.Count(); k++) 
+                {
+                    var name=(from l in db.Users
+                              where pjresult[k].uid==l.UserId
+                              select l).First();
+                    na += name.UserName +" "+ pjresult[k].date+"说：" + pjresult[k].pj1+"\n";
+                }
+
+                string str=result[i].ProductName+"\n内存："+result[i].Memory+"\n存储："+result[i].Storage+"\n颜色："+result[i].Color+"\n价格："+result[i].Price+"\n"+na;
                 TextBox textBox = new TextBox();
                 textBox.TextMode=TextBoxMode.MultiLine;
                 textBox.Text = str;

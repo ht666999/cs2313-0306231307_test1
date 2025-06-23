@@ -92,5 +92,10 @@ namespace cs2313huangtao_test1.test4
             Response.Redirect("useradd.aspx");
 
         }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }
