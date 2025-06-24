@@ -11,6 +11,7 @@ namespace cs2313huangtao_test1.test4
     {
         string leftname, rightname;
         
+
         bananadataDataContext db=new bananadataDataContext();
         List<Products> products = new List<Products>();
         public void Add_click(object sender, EventArgs e) 
@@ -20,6 +21,7 @@ namespace cs2313huangtao_test1.test4
             // 获取商品索引
             //try
             //{
+            
             int uid, pid ;
             pid = products[index].ProductID;
             if (Session["userphone"] != null)
@@ -88,7 +90,7 @@ namespace cs2313huangtao_test1.test4
                 addbtn.CssClass = "selectbutton";
                 addbtn.Click += Add_click;
 
-                string na="评论区：\n" ;
+                string na="评价区：\n" ;
                 var pjresult=(from  k in db.pj
                               where result[i].ProductID==k.pid
                               select k).ToList();
@@ -113,10 +115,7 @@ namespace cs2313huangtao_test1.test4
                 container.Controls.Add(textBox);
                 container.Controls.Add(addbtn);                
                 Panel1.Controls.Add(container);
-            }
-           
-
-        }
-        
+            }       
+        }      
     }
 }

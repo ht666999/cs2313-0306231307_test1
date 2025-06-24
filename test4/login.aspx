@@ -19,12 +19,6 @@
  
  <asp:Button ID="btnLogin" runat="server" Text="登录" CssClass="primary-button" OnClick="BtnLogin_Click"/>
  
- <a href="forgot.aspx" class="action-link">忘记密码 </a>
- 
- <div class="divider">
-     <span class="divider-text">或</span>
- </div>
- 
  <a href="useradd.aspx?flag=1" class="action-link">创建Banana ID</a>
 </asp:Content>
 

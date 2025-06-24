@@ -99,6 +99,35 @@
             <asp:ControlParameter ControlID="GVcategory" Name="CategoryID" PropertyName="SelectedValue" Type="Int32" />
         </WhereParameters>
     </asp:LinqDataSource>
+<asp:Panel ID="Panel1" runat="server">
+    <div style="text-align: center">
+        产品名称：<asp:TextBox ID="TextBox1" runat="server" style="text-align: left"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="RequiredFieldValidator" ForeColor="Red">不能为空</asp:RequiredFieldValidator>
+        <br />
+        图片路径：<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="RequiredFieldValidator" ForeColor="Red">不能为空</asp:RequiredFieldValidator>
+        <br />
+        内存：<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="TextBox3" ErrorMessage="CompareValidator" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">输入数值</asp:CompareValidator>
+        <br />
+        存储：<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox4" ErrorMessage="RequiredFieldValidator" ForeColor="Red">不能为空</asp:RequiredFieldValidator>
+        <br />
+        颜色：<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox5" ErrorMessage="RequiredFieldValidator" ForeColor="Red">不能为空</asp:RequiredFieldValidator>
+        <br />
+        价格：<asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+        <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="TextBox6" ErrorMessage="CompareValidator" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">输入数值</asp:CompareValidator>
+        <br />
+        类别：<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <asp:CompareValidator ID="CompareValidator3" runat="server" ControlToValidate="TextBox7" ErrorMessage="CompareValidator" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">输入类号</asp:CompareValidator>
+        <br />
+        数量：<asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        <asp:CompareValidator ID="CompareValidator4" runat="server" ControlToValidate="TextBox8" ErrorMessage="CompareValidator" ForeColor="Red" Operator="DataTypeCheck" Type="Integer">输入数值</asp:CompareValidator>
+        <br />
+        <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="确认添加" />
+    </div>
+</asp:Panel>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="FooterLinks" runat="server">
     

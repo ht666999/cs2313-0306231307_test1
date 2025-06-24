@@ -30,12 +30,12 @@ namespace cs2313huangtao_test1.test4
                          {
 
                              i.ProductID,
-                             产品名称= i.ProductName,
+                             i.ProductName,
                              ImageURL= i.ImageURL,
-                             价格=i.Price,
-                             数量=j.Quantity,
-
-                             总金额=i.Price * j.Quantity,
+                             i.Price,
+                             j.Quantity,
+                             sum=i.Price * j.Quantity,
+                             j.date
                          };
 
             GridView2.DataSource = result;
@@ -142,8 +142,8 @@ namespace cs2313huangtao_test1.test4
                         select new 
                         {
                             id = i.ProductID,
-                            kc = i.Quantity,
-                            sl = j.Quantity,
+                            kc = i.Quantity,//库存
+                            sl = j.Quantity,//数量
                         };
             bool flag = true;
             foreach (var i in kucun)
@@ -156,6 +156,7 @@ namespace cs2313huangtao_test1.test4
                 foreach (var i in usercar)
                 {
                     i.flag = 1;
+                    i.date = DateTime.Now;
                     var p = (from j in db.Products
                              where j.ProductID == i.ProductID
                              select j).First();
@@ -164,7 +165,8 @@ namespace cs2313huangtao_test1.test4
             }
             else { Response.Write("库存不足！"); }
                 db.SubmitChanges();
-            BindGridView();           
+            BindGridView();
+            zd();
         }
 
         protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)

@@ -142,7 +142,7 @@
             
             <asp:ContentPlaceHolder ID="FooterLinks" runat="server">
                 <div class="footer">
-                    <a href="#" class="action-link">需要帮助？访问Banana ID支持</a>
+                    <a  class="action-link">需要帮助？拨打管理员电话 +86 15625200604</a>
                 </div>
             </asp:ContentPlaceHolder>
         </div>

@@ -47,11 +47,16 @@
         <tr>
             <td>
                 <asp:Button ID="Button2" runat="server" Text="结账" CssClass="btn-style" OnClick="Button2_Click" />
-                <asp:GridView ID="GridView2" runat="server" OnRowCommand="GridView2_RowCommand">
+                <asp:GridView ID="GridView2" runat="server" OnRowCommand="GridView2_RowCommand" AutoGenerateColumns="False">
                     <Columns>
-                        <asp:ImageField DataImageUrlField="ImageURL" DataImageUrlFormatString="{0}" HeaderText="图像">
+                        <asp:ImageField DataImageUrlField="ImageURL"  DataImageUrlFormatString="{0}" HeaderText="图像">
                             <ControlStyle Height="50px" Width="50px"  />
                         </asp:ImageField>
+                        <asp:BoundField DataField="ProductName" HeaderText="商品名称" />
+                        <asp:BoundField DataField="Price" HeaderText="单价" DataFormatString="{0:F2}" />
+                        <asp:BoundField DataField="Quantity" HeaderText="数量" />
+                        <asp:BoundField DataField="sum" HeaderText="总金额" DataFormatString="{0:F2}" />
+                        <asp:Boundfield DataField="date" HeaderText="购买时间" />
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:button

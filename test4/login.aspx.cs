@@ -24,7 +24,7 @@ namespace cs2313huangtao_test1.test4
             var result =(from i in db.Users
                         where i.PhoneNumber == name
                         select i).FirstOrDefault();
-            Response.Write(result.PhoneNumber+"a"+result.UserPassword);
+            //Response.Write(result.PhoneNumber+"a"+result.UserPassword);
             if (result == null)
             {
                 var re = (from i in db.Admins
