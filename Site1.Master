@@ -137,7 +137,7 @@
                 <td style="width: 250px;">
                     <div class="search-container">
                         <asp:TextBox ID="Txt1" runat="server" CssClass="search-box" placeholder="Search bStore..."></asp:TextBox>
-                        <asp:ImageButton ID="ImgBtn1" runat="server" CssClass="search-button" ImageUrl="~/KSimage/research.png" />
+                        <asp:ImageButton ID="ImgBtn1" runat="server" CssClass="search-button" ImageUrl="~/KSimage/research.png" OnClick="ImgBtn1_Click" />
                     </div>
                 </td>
                 

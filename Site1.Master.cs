@@ -9,6 +9,7 @@ namespace cs2313huangtao_test1
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -27,6 +28,15 @@ namespace cs2313huangtao_test1
         protected void ImgBtn3_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("buycar.aspx?uid=" + Session["userid"].ToString());
+        }
+
+        protected void ImgBtn1_Click(object sender, ImageClickEventArgs e)
+        {
+            string str=Txt1.Text;
+            if (str.Contains("mac")) { Response.Redirect("~/test4/home_categoty.aspx?categoty=1"); }
+            if (str.Contains("ph")) { Response.Redirect("~/test4/home_categoty.aspx?categoty=2"); }
+            if (str.Contains("wa")) { Response.Redirect("~/test4/home_categoty.aspx?categoty=3"); }
+            if (str.Contains("pad")) { Response.Redirect("~/test4/home_categoty.aspx?categoty=4"); }
         }
     }
 }
