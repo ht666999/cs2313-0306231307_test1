@@ -97,22 +97,13 @@ namespace cs2313huangtao_test1.test4
         protected void Button6_Click(object sender, EventArgs e)
         {
             Panel1.Visible = true;
+            Response.Redirect("productadd.aspx");
         }
 
         protected void Button7_Click(object sender, EventArgs e)
         {
-            Products newproduct = new Products();
-            newproduct.ProductName=TextBox1.Text;
-            newproduct.ImageURL=TextBox2.Text;
-            newproduct.Memory=TextBox3.Text;
-            newproduct.Storage=TextBox4.Text;
-            newproduct.Color=TextBox5.Text;
-            newproduct.Price=int.Parse(TextBox6.Text);
-            newproduct.CategoryID=int.Parse(TextBox7.Text);
-            newproduct.Quantity=int.Parse(TextBox8.Text);
-            db.Products.InsertOnSubmit(newproduct);
-            db.SubmitChanges();
-            Panel1.Visible=false;
+           
+           
         }
     }
 }

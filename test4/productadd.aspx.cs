@@ -37,7 +37,7 @@ namespace cs2313huangtao_test1.test4
                         && i.Price==newproduct.Price
                         && i.CategoryID==newproduct.CategoryID
                         select i).FirstOrDefault();
-            if (result != null)
+            if (result == null)
             {
                 db.Products.InsertOnSubmit(newproduct);
                 db.SubmitChanges();

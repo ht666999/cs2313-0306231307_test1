@@ -463,6 +463,9 @@
     <Compile Include="test4\admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="test4\bananadata.cs">
+      <DependentUpon>bananadata.dbml</DependentUpon>
+    </Compile>
     <Compile Include="test4\bananadata.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
